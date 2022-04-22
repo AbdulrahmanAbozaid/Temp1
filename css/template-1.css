@@ -26,6 +26,8 @@ p {
     color: #acacac;
 }
 
+
+/* 
 .overlay {
     position: absolute;
     top: 0;
@@ -33,7 +35,7 @@ p {
     width: 100%;
     height: 100%;
     background-color: rgb(0 0 0/.7);
-}
+} */
 
 
 /* start Special Heading */
@@ -448,12 +450,13 @@ p {
 /* START whyUS */
 
 .whyUs {
-    margin: 300px 0;
-    height: 100vh;
+    margin: 60px 0;
     background-color: #f9f9f9;
 }
 
-.whyUs .content {}
+.whyUs .container .content {
+    overflow: auto;
+}
 
 .whyUs .left-text {
     width: 800px;
@@ -464,8 +467,6 @@ p {
 .whyUs .left-text .special-heading {
     text-align: left;
 }
-
-.whyUs .left-text .special-heading h2 {}
 
 .whyUs .left-text .special-heading span {
     margin-left: 0;
@@ -499,17 +500,15 @@ p {
     float: left;
     width: 448px;
     position: relative;
+    overflow: hidden;
 }
-
-.whyUs .right-img img {}
 
 .whyUs .right-img ul {
     position: absolute;
-    top: 3px;
-    left: 67%;
+    bottom: 0;
+    left: 50%;
+    transform: translatex(50%);
     width: 90px;
-    height: 25px;
-    background-color: rgb(51, 197, 199);
 }
 
 .whyUs .right-img ul li {
@@ -522,7 +521,392 @@ p {
     margin-top: 5px;
 }
 
-.whyUs .right-img ul li.active {}
+.whyUs .right-img ul li.active {
+    background-color: #6095ff;
+}
 
 
 /* END whyUS */
+
+
+/* start cunters */
+
+.counters {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.counters .couters-content {
+    padding: 150px 0;
+}
+
+.counters .couters-content .counter {
+    text-align: center;
+    width: 25%;
+    float: left;
+    color: cornflowerblue;
+}
+
+.counters .couters-content .counter i {
+    font-size: 30px;
+}
+
+.counters .couters-content .counter h2 {
+    color: #fff;
+    font-size: 30px;
+}
+
+
+/* end cunters */
+
+
+/* START PRICING */
+
+.pricing {
+    margin: 100px 0;
+}
+
+.pricing .plans-content {
+    margin: 50px 0;
+    overflow: auto;
+}
+
+.pricing .plans-content .plan {
+    width: 30%;
+    height: 305px;
+    padding: 22px 45px;
+    border: 1px solid grey;
+    text-align: center;
+    position: relative;
+    float: left;
+}
+
+.pricing .plans-content .plan-midd {
+    margin: 0 5%;
+}
+
+.pricing .plans-content .plan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgb(0 0 0/.7);
+    transition: .4s;
+}
+
+.pricing .plans-content .plan:hover::before {
+    height: 100%;
+}
+
+.pricing .plans-content .plan:hover h2 {
+    color: #f00;
+}
+
+.pricing .plans-content .plan:hover .plan-pricing {
+    color: red;
+}
+
+
+/* h2 */
+
+.pricing .plans-content .plan h2 {
+    color: #b19f9f;
+    font-size: 18.5px;
+    padding: 0 0 20px;
+}
+
+
+/* pricing */
+
+.plan-pricing {
+    width: 80px;
+    height: 80px;
+    font-size: 24px;
+    margin: 0 auto;
+    border: 2px solid dodgerblue;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.price-tim {
+    font-size: 15px;
+}
+
+.dollar {
+    font-size: 40px;
+}
+
+
+/* paras */
+
+.pricing .plans-content .plan .plan-Para {
+    color: #b19f9f;
+    font-size: 18px;
+    padding: 1.5em 3.7em;
+}
+
+
+/* button */
+
+.plan-Btn {
+    border: 3px solid dodgerblue;
+    background-color: transparent;
+    width: 125px;
+    font-size: 14px;
+    height: 25px;
+}
+
+
+/* END PRICING */
+
+
+/* START WEB-DESIGNER */
+
+.webDesigner {
+    margin: 100px 0;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+    overflow: auto;
+}
+
+.webDesigner .info {
+    width: 50%;
+    float: left;
+}
+
+.webDesigner .info .figure .fig-cap {
+    display: inline-block;
+    vertical-align: top;
+    padding: 5% 0 0 10px;
+}
+
+.webDesigner .info .figure>img {
+    border-radius: 50%;
+}
+
+.webDesigner .info .figure .fig-cap>h4 {
+    color: #fff;
+}
+
+.webDesigner .info .figure .fig-cap>p {
+    color: blue;
+}
+
+.webDesigner .info>p {
+    color: #fff;
+    width: 90%;
+}
+
+
+/* end WEB-DESIGNER */
+
+
+/* START TEEAM */
+
+.team .team-content {
+    margin: 90px 0;
+    overflow: auto;
+}
+
+.team .team-content .teamate {
+    width: 30%;
+    text-align: center;
+    padding: 7px;
+    background-color: #d2c9ca;
+    float: left;
+    position: relative;
+}
+
+.teamate-midd {
+    margin: 0 5%;
+}
+
+.team .team-content .teamate::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgb(76 73 73/.8);
+    transition: .5s;
+}
+
+.team .team-content .teamate:hover::before {
+    height: 100%;
+}
+
+.team .team-content .teamate .figure {
+    position: relative;
+}
+
+.team .team-content .teamate .figure img {
+    position: relative;
+    width: 100%;
+}
+
+.team .team-content .teamate .figure::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(76 73 73/.7);
+    visibility: hidden;
+}
+
+.team .team-content .teamate:hover .figure::after,
+.team .team-content .teamate:hover .figure .toggle {
+    visibility: visible;
+}
+
+.team .team-content .teamate .figure .toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.team .team-content .teamate .figure .toggle i {
+    display: block;
+    color: white;
+    background-color: blueviolet;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.team .team-content .teamate .info h3 {
+    font-size: 21px;
+    padding: 5px;
+    transition: .4s;
+}
+
+.team .team-content .teamate:hover h3 {
+    color: #fff;
+}
+
+.team .team-content .teamate .info p {
+    color: #a9a6a5;
+    text-transform: uppercase;
+    font-size: 22px;
+    transition: .4s;
+}
+
+.team .team-content .teamate:hover p {
+    color: red;
+}
+
+
+/* end TEEAM */
+
+
+/* START RECENT NEWS */
+
+.recentNews {
+    margin: 100px 0;
+}
+
+.recentNews .figs-container {
+    background-color: azure;
+    margin: 55px auto;
+    overflow: auto;
+}
+
+.recentNews .figs-container .figure-1 {
+    width: 30%;
+    height: 440px;
+    padding: 0 15px;
+    position: relative;
+    float: left;
+    background-color: white;
+}
+
+.recentNews .figs-container .figure-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(75, 92, 99, 0.1);
+    transition: .7s ease-in-out;
+}
+
+.recentNews .figs-container .figure-1:hover::before {
+    height: 100%;
+    background-color: rgba(75, 92, 99, 0.7);
+}
+
+.recentNews .figs-container .figure-midd {
+    margin: 0 5%;
+}
+
+.fg-img-1 {
+    width: 163px;
+    height: 200px;
+}
+
+.detail {
+    margin: 25px 0 0;
+    font-size: 12px;
+}
+
+.detail i {
+    margin-left: 5px;
+    color: #6893fd;
+}
+
+.fg-heading-1 {
+    font-size: 19px;
+    margin: 20px 0 0;
+}
+
+.fg-para-1 {
+    font-size: 16px;
+    color: grey;
+    margin: 20px 0 15px;
+}
+
+.fg-anchor-1 {
+    text-decoration: none;
+    color: #5c85de;
+    font-weight: 600;
+}
+
+
+/* end RECENT NEWS */
+
+
+/* START FOORER */
+
+.footer {
+    background-color: #4c4d52;
+}
+
+.footer .content {
+    text-align: center;
+    padding: 50px;
+}
+
+.footer .content .socilas i {
+    color: #FFF;
+    font-size: 69px;
+    background-color: steelblue;
+    border-radius: 50%;
+    margin: 15px 3px;
+}
+
+.footer .content p {
+    color: #6f7075;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+
+/* end FOORER */
